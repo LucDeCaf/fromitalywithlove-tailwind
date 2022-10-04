@@ -1,5 +1,6 @@
 import { useAuth } from "lib/AuthContext";
 import Image from "next/image";
+import Link from "next/link";
 import { BsFillPersonFill } from "react-icons/bs";
 
 const NavProfile = (): JSX.Element => {
@@ -22,20 +23,24 @@ const NavProfile = (): JSX.Element => {
             "bg-slate-300 text-slate-500")
       }
     >
-      {loading || !user?.photoURL ? (
-        <BsFillPersonFill />
-      ) : (
-        <Image
-          src={user.photoURL}
-          alt="Profile photo"
-          loading="eager"
-          layout="responsive"
-          width={1}
-          height={1}
-          objectFit="cover"
-          className="rounded-full"
-        />
-      )}
+      <Link href={loading ? "/" : user ? "/profile" : "/login"}>
+        <a>
+          {loading || !user?.photoURL ? (
+            <BsFillPersonFill />
+          ) : (
+            <Image
+              src={user.photoURL}
+              alt="Profile photo"
+              loading="eager"
+              layout="responsive"
+              width={1}
+              height={1}
+              objectFit="cover"
+              className="rounded-full"
+            />
+          )}
+        </a>
+      </Link>
     </div>
   );
 };
