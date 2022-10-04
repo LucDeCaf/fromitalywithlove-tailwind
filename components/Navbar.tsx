@@ -1,7 +1,6 @@
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import Profile from "components/Profile";
+import NavProfile from "./NavProfile";
 import MenuItem from "./MenuItem";
 import { HiMenu } from "react-icons/hi";
 
@@ -11,26 +10,17 @@ const Navbar = (): JSX.Element => {
   return (
     <nav className="sticky top-0 h-20 z-50 grid">
       <div className="bg-slate-100 z-50 grid grid-cols-3 items-center py-3 px-6 font-karla">
-        <span className="relative w-20 justify-self-start">
+        <div className="justify-self-start text-center">
           <Link href="/">
-            <a>
-              <Image
-                src="/vercel.svg"
-                alt="Logo"
-                layout="responsive"
-                objectFit="contain"
-                width={156}
-                height={78}
-              />
+            <a className="text-xl font-bold text-center sm:whitespace-nowrap">
+              From Italy, With Love
             </a>
           </Link>
-        </span>
+        </div>
         <div className="justify-self-center">
-          <div className="sm:block hidden">
-            Navigation
-          </div>
+          <div className="sm:block hidden">Navigation</div>
           <div className="sm:hidden block">
-            <Profile />
+            <NavProfile />
           </div>
         </div>
         <div className="justify-self-end">
@@ -41,7 +31,7 @@ const Navbar = (): JSX.Element => {
             <HiMenu />
           </span>
           <div className="sm:block hidden">
-            <Profile />
+            <NavProfile />
           </div>
         </div>
       </div>
