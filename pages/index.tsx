@@ -3,7 +3,7 @@ import { NextPage } from "next";
 const Page: NextPage = () => {
   return (
     <main>
-      <h1>Hello world!</h1>
+      <h1 className="font-karla font-bold">Hello world!</h1>
     </main>
   );
 };
