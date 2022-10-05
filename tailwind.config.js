@@ -13,7 +13,7 @@ module.exports = {
         "tan-light": "#CABD9A",
       },
       fontFamily: {
-        karla: ["Karla", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

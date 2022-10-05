@@ -1,8 +1,8 @@
 import "../styles/global.css";
-import "@fontsource/karla/400.css";
-import "@fontsource/karla/500.css";
-import "@fontsource/karla/600.css";
-import "@fontsource/karla/700.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 import type { AppProps } from "next/app";
 import Layout from "components/Layout";
 import { AuthProvider } from "lib/AuthContext";

@@ -9,10 +9,10 @@ const Navbar = (): JSX.Element => {
 
   return (
     <nav className="sticky top-0 h-20 z-50 grid">
-      <div className="bg-slate-100 z-50 grid grid-cols-3 items-center py-3 px-6 font-karla">
+      <div className="bg-slate-100 z-50 grid grid-cols-3 items-center py-3 px-6 font-poppins">
         <div className="justify-self-start text-center">
           <Link href="/">
-            <a className="text-xl font-bold text-center sm:whitespace-nowrap">
+            <a className="text-xl font-semibold italic text-center sm:whitespace-nowrap">
               From Italy, With Love
             </a>
           </Link>

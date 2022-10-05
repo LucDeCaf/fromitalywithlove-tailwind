@@ -21,7 +21,7 @@ const LoginForm = (): JSX.Element => {
   };
 
   return (
-    <div className="items-center sm:w-96 w-full h-auto p-4 border-[3px] border-blue-600 font-karla rounded-md">
+    <div className="items-center sm:w-96 w-full h-auto p-4 border-[3px] border-blue-600 font-poppins rounded-md">
       <h1 className="text-3xl font-semibold mb-4">Login to your account</h1>
       <form onSubmit={handleSubmit} className="grid grid-rows-3 grid-cols-2">
         <div className="flex flex-col row-start-1">

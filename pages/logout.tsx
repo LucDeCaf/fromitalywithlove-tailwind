@@ -16,12 +16,12 @@ const Page: NextPage = () => {
         }
         if (!pushed) {
           router.push("/");
-          setPushed(true)
+          setPushed(true);
         }
       }
     }
     logoutAndReturn();
-  }, [user, loading, logout, router]);
+  }, [user, loading, logout, router, pushed]);
 
   return <h1 className="mt-10 text-5xl font-bold text-center">Loading...</h1>;
 };
