@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import LoginForm from "components/LoginForm";
+import SignupForm from "components/SignupForm";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useAuth } from "lib/AuthContext";
@@ -17,7 +17,7 @@ const Page: NextPage = () => {
   } else {
     return (
       <main className="flex justify-center p-4">
-        <LoginForm />
+        <SignupForm />
       </main>
     );
   }
