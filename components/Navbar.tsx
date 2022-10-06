@@ -4,11 +4,7 @@ import NavProfile from "./NavProfile";
 import MenuItem from "./MenuItem";
 import { HiMenu } from "react-icons/hi";
 import { nanoid } from "nanoid";
-
-interface NavItemType {
-  name: string;
-  url: string;
-}
+import { NavItemType } from "lib/types";
 
 const Navbar = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState<boolean | null>(null);

@@ -1,11 +1,7 @@
 import Link from "next/link";
+import { MenuItemType } from "lib/types";
 
-interface MenuItemProps {
-  children: JSX.Element | string;
-  href: string;
-}
-
-const MenuItem = ({ children, href }: MenuItemProps): JSX.Element => {
+const MenuItem = ({ children, href }: MenuItemType): JSX.Element => {
   return (
     <Link href={href}>
       <a>

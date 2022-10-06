@@ -1,10 +1,5 @@
 import Image from "next/image";
-
-interface CardType {
-  src: string;
-  title: string;
-  body: string;
-}
+import { CardType } from "lib/types";
 
 const Card = ({ src, title, body }: CardType): JSX.Element => {
   return (
