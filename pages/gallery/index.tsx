@@ -1,14 +1,12 @@
-import Card from "components/Card";
-import { GetStaticProps, NextPage } from "next";
-import { nanoid } from "nanoid";
-import { ImageType } from "lib/types";
-import Heading from "components/Heading";
 import CardGrid from "components/CardGrid";
+import Heading from "components/Heading";
+import { ImageType } from "lib/types";
+import { GetStaticProps, NextPage } from "next";
 
 const Page: NextPage<{ images: ImageType[] }> = ({ images }) => {
   return (
     <main className="p-4">
-      <Heading>From Italy, With Love</Heading>
+      <Heading>Gallery</Heading>
       <CardGrid images={images} />
     </main>
   );
