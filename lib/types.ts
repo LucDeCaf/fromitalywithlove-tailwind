@@ -8,6 +8,7 @@ export interface CardType {
   src: string;
   title: string;
   body: string;
+  path?: string;
 }
 
 export interface MenuItemType {
