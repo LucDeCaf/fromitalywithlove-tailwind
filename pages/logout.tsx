@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAuth } from "lib/AuthContext";
+import LoadingPage from "components/LoadingPage";
 
 const Page: NextPage = () => {
   const { user, loading, logout } = useAuth();
@@ -23,7 +24,7 @@ const Page: NextPage = () => {
     logoutAndReturn();
   }, [user, loading, logout, router, pushed]);
 
-  return <h1 className="mt-10 text-5xl font-bold text-center">Loading...</h1>;
+  return <LoadingPage />;
 };
 
 export default Page;

@@ -3,6 +3,7 @@ import LoginForm from "components/LoginForm";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useAuth } from "lib/AuthContext";
+import LoadingPage from "components/LoadingPage";
 
 const Page: NextPage = () => {
   const { user, loading } = useAuth();
@@ -12,15 +13,13 @@ const Page: NextPage = () => {
     if (user) router.push("/");
   }, [user, router]);
 
-  if (loading) {
-    return <h1 className="mt-10 text-5xl font-bold text-center">Loading...</h1>;
-  } else {
-    return (
-      <main className="flex justify-center p-4">
-        <LoginForm />
-      </main>
-    );
-  }
+  if (loading) return <LoadingPage />;
+
+  return (
+    <main className="flex justify-center p-4">
+      <LoginForm />
+    </main>
+  );
 };
 
 export default Page;
