@@ -2,6 +2,7 @@ export interface ImageType {
   label: string;
   desc: string;
   downloadUrl: string;
+  categories: string[];
 }
 
 export interface CardType {
