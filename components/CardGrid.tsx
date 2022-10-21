@@ -1,8 +1,8 @@
 import Card from "./Card";
 import { nanoid } from "nanoid";
-import { ImageType } from "lib/types";
+import { CardGridType } from "lib/types";
 
-const CardGrid = ({ images }: { images: ImageType[] }) => {
+const CardGrid = ({ images, links }: CardGridType) => {
   return (
     <>
       {images.length !== 0 ? (
@@ -13,6 +13,7 @@ const CardGrid = ({ images }: { images: ImageType[] }) => {
               src={image.downloadUrl}
               title={image.label}
               body={image.desc}
+              paths={image.links && links ? image.links : undefined}
             />
           ))}
         </div>
