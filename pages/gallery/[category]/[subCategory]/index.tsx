@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const parsedCategory = typeof category !== "string" ? category![0] : category;
   const parsedSubCategory =
     typeof subCategory !== "string" ? subCategory![0] : subCategory;
-  const res = await fetch("http://localhost:3000/api/get/image");
+  const res = await fetch("http://localhost:3000/api/get/images");
   const data = await res.json();
   if (!data.success) {
     throw new Error(data.message);

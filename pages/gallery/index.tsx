@@ -7,13 +7,13 @@ const Page: NextPage<{ images: ImageType[] }> = ({ images }) => {
   return (
     <main className="p-4">
       <Heading>Gallery</Heading>
-      <CardGrid images={images} />
+      <CardGrid images={images} links />
     </main>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/get/image");
+  const res = await fetch("http://localhost:3000/api/get/images");
   const data = await res.json();
   if (!data.success) {
     throw new Error(data.message);

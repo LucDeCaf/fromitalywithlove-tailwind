@@ -31,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { category } = params as ParsedUrlQuery;
   const parsedCategory = typeof category !== "string" ? category![0] : category;
-  const res = await fetch("http://localhost:3000/api/get/image");
+  const res = await fetch("http://localhost:3000/api/get/images");
   const data = await res.json();
   if (!data.success) {
     throw new Error(data.message);
