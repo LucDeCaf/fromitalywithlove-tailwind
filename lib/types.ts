@@ -1,15 +1,26 @@
+export interface LabelledPath {
+  path: string;
+  label: string;
+}
+
+export interface CardGridType {
+  images: ImageType[];
+  links?: boolean;
+}
+
 export interface ImageType {
   label: string;
   desc: string;
   downloadUrl: string;
   categories: string[];
+  links: LabelledPath[];
 }
 
 export interface CardType {
   src: string;
   title: string;
   body: string;
-  path?: string;
+  paths?: LabelledPath[];
 }
 
 export interface MenuItemType {
