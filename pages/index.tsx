@@ -1,6 +1,4 @@
-import Card from "components/Card";
 import { GetStaticProps, NextPage } from "next";
-import { nanoid } from "nanoid";
 import { ImageType } from "lib/types";
 import Heading from "components/Heading";
 import CardGrid from "components/CardGrid";
@@ -15,7 +13,7 @@ const Page: NextPage<{ images: ImageType[] }> = ({ images }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/get/image");
+  const res = await fetch("http://localhost:3000/api/get/images");
   const data = await res.json();
   if (!data.success) {
     throw new Error(data.message);
